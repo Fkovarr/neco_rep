@@ -88,7 +88,7 @@ def write_closest_cities(
 ) -> None:
     with open(path, 'w', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=',')
-        writer.writerow(['longitude', 'longtitude', 'city'])
+        writer.writerow(['latitude', 'longitude', 'city'])
         for coordinate in coordinates:
             closest_city = min(
                 cities, key=lambda city: Coordinate.distance(city, coordinate)
